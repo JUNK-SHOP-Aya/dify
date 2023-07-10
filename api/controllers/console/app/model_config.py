@@ -42,6 +42,7 @@ class ModelConfigResource(Resource):
             suggested_questions=json.dumps(model_configuration['suggested_questions']),
             suggested_questions_after_answer=json.dumps(model_configuration['suggested_questions_after_answer']),
             more_like_this=json.dumps(model_configuration['more_like_this']),
+            sensitive_word_avoidance=json.dumps(model_configuration['sensitive_word_avoidance']),
             model=json.dumps(model_configuration['model']),
             user_input_form=json.dumps(model_configuration['user_input_form']),
             pre_prompt=model_configuration['pre_prompt'],
