@@ -29,7 +29,7 @@ export default function AccountAbout({
       onClose={() => { }}
       className={s.modal}
     >
-      <div className='relative'>
+      {/* <div className='relative'>
         <XMarkIcon className='absolute top-0 -right-2 w-4 h-4 cursor-pointer' onClick={onCancel} />
         <div>
           <div className={classNames(
@@ -85,7 +85,7 @@ export default function AccountAbout({
             }
           </div>
         </div>
-      </div>
+      </div> */}
     </Modal>
   )
 }

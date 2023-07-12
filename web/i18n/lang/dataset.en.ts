@@ -10,12 +10,12 @@ const translation = {
   datasetDeleted: 'Dataset deleted',
   datasetDeleteFailed: 'Failed to delete dataset',
   didYouKnow: 'Did you know?',
-  intro1: 'The dataset can be integrated into the Dify application ',
+  intro1: 'The dataset can be integrated into the application ',
   intro2: 'as a context',
   intro3: ',',
   intro4: 'or it ',
   intro5: 'can be created',
-  intro6: ' as a standalone ChatGPT index plug-in to publish',
+  intro6: ' as a standalone LLM index plug-in to publish',
 }
 
 export default translation

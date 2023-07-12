@@ -33,7 +33,7 @@ const translation = {
           copyRightPlaceholder: '请输入作者或组织名称',
           privacyPolicy: '隐私政策',
           privacyPolicyPlaceholder: '请输入隐私政策',
-          privacyPolicyTip: '帮助访问者了解该应用收集的数据，可参考 Dify 的<privacyPolicyLink>隐私政策</privacyPolicyLink>。',
+          privacyPolicyTip: '帮助访问者了解该应用收集的数据，可参考<privacyPolicyLink>隐私政策</privacyPolicyLink>。',
         },
       },
       customize: {
@@ -80,9 +80,9 @@ const translation = {
       explanation: '与 AI 有效互动，即有一问一答以上的唯一用户数。提示词编排和调试的会话不计入。',
     },
     tokenUsage: {
-      title: '费用消耗',
-      explanation: '反映每日该应用请求语言模型的 Tokens 花费，用于成本控制。',
-      consumed: '耗费',
+      title: 'Token 消耗',
+      explanation: '反映每日该应用请求语言模型的 Tokens 消耗，用于成本控制。',
+      consumed: '消耗',
     },
     avgSessionInteractions: {
       title: '平均会话互动数',

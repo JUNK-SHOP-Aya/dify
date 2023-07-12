@@ -160,7 +160,7 @@ function AppCard({
           })}
         </div>
       </div>
-      {isApp
+      {/* {isApp
         ? (
           <div
             className={
@@ -176,7 +176,7 @@ function AppCard({
             </div>
           </div>
         )
-        : null}
+        : null} */}
       {isApp
         ? (
           <div>

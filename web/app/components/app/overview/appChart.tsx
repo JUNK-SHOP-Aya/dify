@@ -202,7 +202,7 @@ const Chart: React.FC<IChartProps> = ({
                 ? ''
                 : `<span style='font-size:12px'>
                                   <span style='margin-left:4px;color:#6B7280'>(</span>
-                                  <span style='color:#FF8A4C'>~$${get(params.data, 'total_price', 0)}</span>
+                                  <!--span style='color:#FF8A4C'>~$${get(params.data, 'total_price', 0)}</span-->
                                   <span style='color:#6B7280'>)</span>
                               </span>`}
                           </div>`
@@ -225,9 +225,9 @@ const Chart: React.FC<IChartProps> = ({
           type={!CHART_TYPE_CONFIG[chartType].showTokens
             ? ''
             : <span>{t('appOverview.analysis.tokenUsage.consumed')} Tokens<span className='text-sm'>
-              <span className='ml-1 text-gray-500'>(</span>
+              {/* <span className='ml-1 text-gray-500'>(</span>
               <span className='text-orange-400'>~{sum(statistics.map(item => parseFloat(get(item, 'total_price', '0')))).toLocaleString('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 4 })}</span>
-              <span className='text-gray-500'>)</span>
+              <span className='text-gray-500'>)</span> */}
             </span></span>}
           textStyle={{ main: `!text-3xl !font-normal ${sumData === 0 ? '!text-gray-300' : ''}` }} />
       </div>

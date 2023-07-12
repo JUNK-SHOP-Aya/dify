@@ -64,8 +64,8 @@ const Configuration: FC = () => {
     frequency_penalty: 1, // -2-2
   })
   const [modelConfig, doSetModelConfig] = useState<ModelConfig>({
-    provider: 'openai',
-    model_id: 'gpt-3.5-turbo',
+    provider: 'NoName',
+    model_id: 'zhisouLLM-1.0-turbo',
     configs: {
       prompt_template: '',
       prompt_variables: [] as PromptVariable[],

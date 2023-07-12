@@ -34,7 +34,7 @@ const translation = {
     annotationTip: '{{user}} 标记的改进回复',
     timeConsuming: '耗时',
     second: ' 秒',
-    tokenCost: '花费 Token',
+    tokenCost: '使用 Token',
     loading: '加载中',
     operation: {
       like: '赞同',

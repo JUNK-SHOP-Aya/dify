@@ -16,10 +16,10 @@ const Overview = async ({
   const { t } = await useTranslation(locale, 'app-overview')
   return (
     <div className="h-full px-16 py-6 overflow-scroll">
-      <WelcomeBanner />
+      {/* <WelcomeBanner /> */}
       <div className='flex flex-row items-center justify-between mb-4 text-xl text-gray-900'>
         {t('overview.title')}
-        <EditKeyPopover />
+        {/* <EditKeyPopover /> */}
       </div>
       <CardView appId={appId} />
       <ChartView appId={appId} />

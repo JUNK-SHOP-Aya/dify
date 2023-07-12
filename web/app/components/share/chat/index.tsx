@@ -29,7 +29,7 @@ import s from './style.module.css'
 
 export type IMainProps = {
   isInstalledApp?: boolean,
-  installedAppInfo? : InstalledApp
+  installedAppInfo?: InstalledApp
 }
 
 const Main: FC<IMainProps> = ({
@@ -56,10 +56,7 @@ const Main: FC<IMainProps> = ({
   // Can Use metadata(https://beta.nextjs.org/docs/api-reference/metadata) to set title. But it only works in server side client. 
   useEffect(() => {
     if (siteInfo?.title) {
-      if (plan !== 'basic')
-        document.title = `${siteInfo.title}`
-      else
-        document.title = `${siteInfo.title} - Powered by Dify`
+      document.title = `${siteInfo.title}`
     }
 
   }, [siteInfo?.title, plan])
@@ -232,14 +229,14 @@ const Main: FC<IMainProps> = ({
 
   const fetchInitData = () => {
     return Promise.all([isInstalledApp ? {
-      app_id: installedAppInfo?.id, 
+      app_id: installedAppInfo?.id,
       site: {
         title: installedAppInfo?.app.name,
         prompt_public: false,
         copyright: ''
       },
       plan: 'basic',
-    }: fetchAppInfo(), fetchConversations(isInstalledApp, installedAppInfo?.id), fetchAppParams(isInstalledApp, installedAppInfo?.id)])
+    } : fetchAppInfo(), fetchConversations(isInstalledApp, installedAppInfo?.id), fetchAppParams(isInstalledApp, installedAppInfo?.id)])
   }
 
 
@@ -262,7 +259,7 @@ const Main: FC<IMainProps> = ({
         // fetch new conversation info
         const { user_input_form, opening_statement: introduction, suggested_questions_after_answer }: any = appParams
         const prompt_variables = userInputsFormToPromptVariables(user_input_form)
-        if(siteInfo.default_language) {
+        if (siteInfo.default_language) {
           changeLanguage(siteInfo.default_language)
         }
         setNewConversationInfo({
@@ -476,11 +473,11 @@ const Main: FC<IMainProps> = ({
           onCreateNewChat={() => handleConversationIdChange('-1')}
         />
       )}
-      
+
       {/* {isNewConversation ? 'new' : 'exist'}
         {JSON.stringify(newConversationInputs ? newConversationInputs : {})}
         {JSON.stringify(existConversationInputs ? existConversationInputs : {})} */}
-      <div 
+      <div
         className={cn(
           "flex rounded-t-2xl bg-white overflow-hidden",
           isInstalledApp && 'rounded-b-2xl',
@@ -505,7 +502,7 @@ const Main: FC<IMainProps> = ({
         <div className={cn(
           isInstalledApp ? s.installedApp : 'h-[calc(100vh_-_3rem)]',
           'flex-grow flex flex-col overflow-y-auto'
-          )
+        )
         }>
           <ConfigSence
             conversationName={conversationName}
