@@ -106,9 +106,9 @@ const EditKeyDiv: FC<IEditKeyDiv> = ({ className = '', showInPopover = false, on
         <div className={`text-[#D92D20] mt-2 text-xs`}>
           {t('common.provider.apiKeyExceedBill')}
           {locale === 'en' ? ' ' : ''}
-          <Link 
+          <Link
             className='underline'
-            href="https://platform.openai.com/account/api-keys" 
+            href="https://platform.openai.com/account/api-keys"
             target={'_blank'}>
             {locale === 'en' ? 'this link' : '这篇文档'}
           </Link>
@@ -151,10 +151,6 @@ const EditKeyDiv: FC<IEditKeyDiv> = ({ className = '', showInPopover = false, on
         {showInPopover ? null : <Button type='primary' onClick={onSaveKey} className='!h-9 !inline-block ml-2' loading={loading} disabled={editStatus !== 'verified'}>{t('common.operation.save')}</Button>}
       </div>
       {renderErrorMessage()}
-      <Link className="inline-flex items-center mt-2 text-xs font-normal cursor-pointer text-primary-600 w-fit" href="https://platform.openai.com/account/api-keys" target={'_blank'}>
-        {t('appOverview.welcome.getKeyTip')}
-        <ArrowTopRightOnSquareIcon className='w-3 h-3 ml-1 text-primary-600' aria-hidden="true" />
-      </Link>
       {showInPopover && <div className='flex justify-end mt-6'>
         <Button className='flex-shrink-0 mr-2' onClick={onClosePanel}>{t('common.operation.cancel')}</Button>
         <Button type='primary' className='flex-shrink-0' onClick={onSaveKey} loading={loading} disabled={editStatus !== 'verified'}>{t('common.operation.save')}</Button>
@@ -184,7 +180,7 @@ export const EditKeyPopover: FC = () => {
   return (
     !targetProvider
       ? <div className='flex items-center'>
-        <Tag className='mr-2 h-fit' color='red'><ExclamationCircleIcon className='h-3.5 w-3.5 mr-2' />OpenAI API key invalid</Tag>
+        <Tag className='mr-2 h-fit' color='red'><ExclamationCircleIcon className='h-3.5 w-3.5 mr-2' />API key invalid</Tag>
         <Popover
           htmlContent={<EditKeyDiv className='!border-0' showInPopover={true} getTenantInfo={getTenantInfo} />}
           trigger='click'

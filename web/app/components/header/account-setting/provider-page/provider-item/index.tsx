@@ -33,10 +33,10 @@ const ProviderItem = ({
   const [loading, setLoading] = useState(false)
   const { notify } = useContext(ToastContext)
   const [token, setToken] = useState<ProviderAzureToken | string>(
-    provider.provider_name === 'azure_openai' 
+    provider.provider_name === 'azure_openai'
       ? { openai_api_base: '', openai_api_key: '' }
       : ''
-    )
+  )
   const id = `${provider.provider_name}-${provider.provider_type}`
   const isOpen = id === activeId
   const comingSoon = false
@@ -115,7 +115,7 @@ const ProviderItem = ({
               </div>
               <div className='
                 flex items-center
-                px-3 h-7 rounded-md cursor-pointer bg-primary-700
+                px-3 h-7 rounded-md cursor-pointer bg-primary-600
                 text-xs font-medium text-white
               ' onClick={handleUpdateToken}>
                 {t('common.operation.save')}
@@ -126,18 +126,18 @@ const ProviderItem = ({
       </div>
       {
         provider.provider_name === ProviderName.OPENAI && isOpen && (
-          <OpenaiProvider 
-            provider={provider} 
-            onValidatedStatus={v => setValidatedStatus(v)} 
+          <OpenaiProvider
+            provider={provider}
+            onValidatedStatus={v => setValidatedStatus(v)}
             onTokenChange={v => setToken(v)}
           />
         )
       }
       {
         provider.provider_name === ProviderName.AZURE_OPENAI && isOpen && (
-          <AzureProvider 
-            provider={provider} 
-            onValidatedStatus={v => setValidatedStatus(v)} 
+          <AzureProvider
+            provider={provider}
+            onValidatedStatus={v => setValidatedStatus(v)}
             onTokenChange={v => setToken(v)}
           />
         )

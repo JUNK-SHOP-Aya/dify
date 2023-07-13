@@ -74,8 +74,8 @@ const DebugConfigurationContext = createContext<IDebugConfiguration>({
   },
   setCompletionParams: () => { },
   modelConfig: {
-    provider: 'NoName', // 'OPENAI'
-    model_id: 'zhisouLLM-1.0-turbo', // 'gpt-3.5-turbo'
+    provider: 'OPENAI', // 'OPENAI'
+    model_id: 'gpt-3.5-turbo', // 'gpt-3.5-turbo'
     configs: {
       prompt_template: '',
       prompt_variables: [],

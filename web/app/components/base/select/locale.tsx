@@ -4,11 +4,11 @@ import { Fragment } from 'react'
 import { GlobeAltIcon } from '@heroicons/react/24/outline'
 
 export const LOCALES = [
-  { value: 'en', name: 'EN' },
+  // { value: 'en', name: 'EN' },
   { value: 'zh-Hans', name: '简体中文' },
 ]
 export const RFC_LOCALES = [
-  { value: 'en-US', name: 'EN' },
+  // { value: 'en-US', name: 'EN' },
   { value: 'zh-Hans', name: '简体中文' },
 ]
 interface ISelectProps {

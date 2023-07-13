@@ -37,12 +37,16 @@ const ShareLinkModal: FC<IShareLinkProps> = ({
     {/* input share url */}
     <input disabled type='text' value={linkUrl} className='mt-1 w-full bg-gray-50 p-2 text-primary-600 text-xs font-normal outline-gray-50 hover:outline-gray-50 cursor-pointer' />
     {/* button copy link/ button regenerate */}
+    <input id="shareUrl" value={linkUrl} style={{ position: 'absolute', opacity: 0, left: '25px', zIndex: -1 }} />
     <div className='mt-4 flex gap-3'>
       <Button
         type="primary"
         className='w-32'
         onClick={() => {
-          copy(linkUrl)
+          // copy(linkUrl)
+          var input = document.querySelector("#shareUrl");
+          input.select();
+          document.execCommand("Copy");
         }}
       >
         <LinkIcon className='w-4 h-4 mr-2' />

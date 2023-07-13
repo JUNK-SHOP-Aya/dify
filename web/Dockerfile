@@ -13,7 +13,6 @@ WORKDIR /app/web
 
 COPY package.json /app/web/package.json
 
-
 COPY . /app/web/
 
 RUN npm run build

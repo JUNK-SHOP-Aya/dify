@@ -110,7 +110,7 @@ const DatasetDetailLayout: FC<IAppDetailLayoutProps> = (props) => {
 
   useEffect(() => {
     if (datasetRes) {
-      document.title = `${datasetRes.name || 'Dataset'}`  // NoName
+      document.title = `${datasetRes.name || 'Dataset'} - Ava`
     }
   }, [datasetRes])
 
@@ -124,27 +124,7 @@ const DatasetDetailLayout: FC<IAppDetailLayoutProps> = (props) => {
           <div className={s.subTitle}>{relatedApps?.total || '--'} {t('common.datasetMenus.relatedApp')}</div>
           {relatedApps?.data?.map((item) => (<LikedItem detail={item} />))}
         </>
-      ) : (
-        <div className='mt-5 p-3'>
-          <div className='flex items-center justify-start gap-2'>
-            {/* <div className={s.emptyIconDiv}>
-              <Squares2X2Icon className='w-3 h-3 text-gray-500' />
-            </div> */}
-            {/* <div className={s.emptyIconDiv}>
-              <PuzzlePieceIcon className='w-3 h-3 text-gray-500' />
-            </div> */}
-          </div>
-          {/* <div className='text-xs text-gray-500 mt-2'>{t('common.datasetMenus.emptyTip')}</div> */}
-          {/* <a
-            className='inline-flex items-center text-xs text-primary-600 mt-2 cursor-pointer'
-            href={`https://docs.dify.ai/${locale === 'en' ? '' : 'v/zh-hans'}/application/prompt-engineering`}
-            target='_blank'
-          >
-            <BookOpenIcon className='mr-1' />
-            {t('common.datasetMenus.viewDoc')}
-          </a> */}
-        </div>
-      )}
+      ) : (<></>)}
     </div>
   }
 

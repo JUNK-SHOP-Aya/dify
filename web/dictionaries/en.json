@@ -12,8 +12,8 @@
     "overview": {
       "title": "Overview",
       "To get started,": "To get started,",
-      "enter your OpenAI API key below": "enter your OpenAI API key below",
-      "Get your API key from OpenAI dashboard": "Get your API key from OpenAI dashboard",
+      "enter your OpenAI API key below": "enter your API key below",
+      "Get your API key from OpenAI dashboard": "Get your API key",
       "Token Usage": "Token Usage"
     },
     "logs": {

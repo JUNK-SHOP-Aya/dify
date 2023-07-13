@@ -64,8 +64,8 @@ const Configuration: FC = () => {
     frequency_penalty: 1, // -2-2
   })
   const [modelConfig, doSetModelConfig] = useState<ModelConfig>({
-    provider: 'NoName',
-    model_id: 'zhisouLLM-1.0-turbo',
+    provider: 'openai',
+    model_id: 'gpt-3.5-turbo',
     configs: {
       prompt_template: '',
       prompt_variables: [] as PromptVariable[],
@@ -247,22 +247,6 @@ const Configuration: FC = () => {
           <div className='flex items-center justify-between px-6 border-b shrink-0 h-14 boder-gray-100'>
             <div className='text-xl text-gray-900'>{t('appDebug.pageTitle')}</div>
             <div className='flex items-center'>
-              {/* Model and Parameters */}
-              <ConfigModel
-                mode={mode}
-                completionParams={completionParams}
-                modelId={modelConfig.model_id}
-                setModelId={setModelId}
-                onCompletionParamsChange={(newParams: CompletionParams) => {
-                  setCompletionParams(newParams)
-                }}
-                disabled={!hasSetAPIKEY}
-                canUseGPT4={hasSetCustomAPIKEY}
-                onShowUseGPT4Confirm={() => {
-                  setShowUseGPT4Confirm(true)
-                }}
-              />
-              <div className='mx-3 w-[1px] h-[14px] bg-gray-200'></div>
               <Button onClick={() => setShowConfirm(true)} className='shrink-0 mr-2 w-[70px] !h-8 !text-[13px] font-medium'>{t('appDebug.operation.resetConfig')}</Button>
               <Button type='primary' onClick={saveAppConfig} className='shrink-0 w-[70px] !h-8 !text-[13px] font-medium'>{t('appDebug.operation.applyConfig')}</Button>
             </div>

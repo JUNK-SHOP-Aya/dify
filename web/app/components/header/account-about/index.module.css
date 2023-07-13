@@ -7,8 +7,8 @@
 .logo-text {
   width: 74.09px;
   height: 15.32px;
-  background: url(../assets/logo-text.svg) center center no-repeat;
-  background-size: contain;
+  /* background: url(../assets/logo-text.svg) center center no-repeat;
+  background-size: contain; */
 }
 
 .modal {

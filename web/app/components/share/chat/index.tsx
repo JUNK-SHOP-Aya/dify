@@ -56,7 +56,10 @@ const Main: FC<IMainProps> = ({
   // Can Use metadata(https://beta.nextjs.org/docs/api-reference/metadata) to set title. But it only works in server side client. 
   useEffect(() => {
     if (siteInfo?.title) {
-      document.title = `${siteInfo.title}`
+      if (plan !== 'basic')
+        document.title = `${siteInfo.title}`
+      else
+        document.title = `${siteInfo.title} - Powered by Ava`
     }
 
   }, [siteInfo?.title, plan])

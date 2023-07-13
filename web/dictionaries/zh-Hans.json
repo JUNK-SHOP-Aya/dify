@@ -12,8 +12,8 @@
     "overview": {
       "title": "概览",
       "To get started,": "从这里开始",
-      "enter your OpenAI API key below 👇": "输入你的 OpenAI API 密钥👇",
-      "Get your API key from OpenAI dashboard": "去 OpenAI 管理面板获取",
+      "enter your OpenAI API key below 👇": "输入你的 API 密钥👇",
+      "Get your API key from OpenAI dashboard": "去获取",
       "Token Usage": "Token 消耗"
     },
     "logs": {
