@@ -103,7 +103,7 @@ const ConifgModel: FC<IConifgModelProps> = ({
     },
   ]
 
-  const selectModelDisabled = false // chat  gpt-3.5-turbo, gpt-4; text generation text-davinci-003, gpt-3.5-turbo
+  const selectModelDisabled = true // chat  gpt-3.5-turbo, gpt-4; text generation text-davinci-003, gpt-3.5-turbo
 
   const selectedModel = { name: modelId } // options.find(option => option.id === modelId)
   const [isShowOption, { setFalse: hideOption, toggle: toogleOption }] = useBoolean(false)
@@ -120,7 +120,7 @@ const ConifgModel: FC<IConifgModelProps> = ({
         onShowUseGPT4Confirm()
         return
       }
-      if (id !== 'gpt-4' && completionParams.max_tokens > 4000) {
+      if  (id !== 'gpt-4' && completionParams.max_tokens > 4000) {
         Toast.notify({
           type: 'warning',
           message: t('common.model.params.setToCurrentModelMaxTokenTip'),
@@ -194,7 +194,7 @@ const ConifgModel: FC<IConifgModelProps> = ({
         onClick={() => !disabled && toogleShowConfig()}
       >
         <ModelIcon />
-        <div className='text-[13px] text-gray-900 font-medium'>{selectedModel.name}</div>
+        <div className='text-[13px] text-gray-900 font-medium'>zhisouLLM-1.0-turbo</div>
         {disabled ? <InformationCircleIcon className='w-3.5 h-3.5 text-[#F79009]' /> : <Cog8ToothIcon className='w-3.5 h-3.5 text-gray-500' />}
       </div>
       {isShowConfig && (
@@ -221,7 +221,7 @@ const ConifgModel: FC<IConifgModelProps> = ({
               <div className="relative" style={{ zIndex: 30 }}>
                 <div ref={triggerRef} onClick={() => !selectModelDisabled && toogleOption()} className={cn(selectModelDisabled ? 'cursor-not-allowed' : 'cursor-pointer', 'flex items-center h-9 px-3 space-x-2 rounded-lg bg-gray-50 ')}>
                   <ModelIcon />
-                  <div className="text-sm gray-900">{selectedModel?.name}</div>
+                  <div className="text-sm gray-900">zhisouLLM-1.0-turbo</div>
                   {!selectModelDisabled && <ChevronDownIcon className={cn(isShowOption && 'rotate-180', 'w-[14px] h-[14px] text-gray-500')} />}
                 </div>
                 {isShowOption && (

@@ -478,16 +478,13 @@ const StepTwo = ({
                       {t('datasetCreation.stepTwo.qualified')}
                       {!hasSetIndexType && <span className={s.recommendTag}>{t('datasetCreation.stepTwo.recommend')}</span>}
                     </div>
-                    <div className={s.tip}>{t('datasetCreation.stepTwo.qualifiedTip')}</div>
                     <div className='pb-0.5 text-xs font-medium text-gray-500'>{t('datasetCreation.stepTwo.emstimateCost')}</div>
                     {
-                      fileIndexingEstimate
-                        ? (
-                          <div className='text-xs font-medium text-gray-800'>{formatNumber(fileIndexingEstimate.tokens)} tokens(<span className='text-yellow-500'>${formatNumber(fileIndexingEstimate.total_price)}</span>)</div>
-                        )
-                        : (
-                          <div className={s.calculating}>{t('datasetCreation.stepTwo.calculating')}</div>
-                        )
+                      !!fileIndexingEstimate ? (
+                        <div className='text-xs font-medium text-gray-800'>{formatNumber(fileIndexingEstimate.tokens)} tokens</div>
+                      ) : (
+                        <div className={s.calculating}>{t('datasetCreation.stepTwo.calculating')}</div>
+                      )
                     }
                   </div>
                   {!hasSetAPIKEY && (

@@ -1,4 +1,4 @@
-FROM langgenius/base:1.0.0-bullseye-slim
+FROM langgenius/dify-web:0.3.1
 
 LABEL maintainer="takatost@gmail.com"
 
@@ -12,8 +12,6 @@ EXPOSE 3000
 WORKDIR /app/web
 
 COPY package.json /app/web/package.json
-
-RUN npm install --only=prod
 
 COPY . /app/web/
 

@@ -55,23 +55,17 @@ const Header = () => {
         'flex flex-1 items-center justify-between px-4',
       )}>
         <div className='flex items-center'>
-          <Link href="/apps" className='flex items-center mr-4'>
-            <div className={s.logo} />
-          </Link>
-          {
-            starCount > 0 && (
-              <Link
-                href='https://github.com/langgenius/dify'
-                target='_blank'
-                className='flex items-center leading-[18px] border border-gray-200 rounded-md text-xs text-gray-700 font-semibold overflow-hidden'>
-                <div className='flex items-center px-2 py-1 bg-gray-100'>
-                  <div className={`${s['github-icon']} mr-1 rounded-full`} />
-                  Star
-                </div>
-                <div className='px-2 py-1 bg-white border-l border-gray-200'>{`${starCount}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</div>
-              </Link>
-            )
-          }
+          {/* <Link href="/apps" className='flex items-center mr-3'>
+            <div className={s['logo']} />
+          </Link> */}
+          {/* Add it when has many stars */}
+          {/* <div className='
+            flex items-center h-[26px] px-2 bg-white
+            border border-solid border-[#E5E7EB] rounded-l-[6px] rounded-r-[6px]
+          '>
+            <div className={s['alpha']} />
+            <div className='ml-1 text-xs font-semibold text-gray-700'>{t('common.menus.status')}</div>
+          </div> */}
         </div>
         <div className='flex items-center'>
           <Link href="/explore/apps" className={classNames(

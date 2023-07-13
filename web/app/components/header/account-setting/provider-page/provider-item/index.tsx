@@ -120,7 +120,7 @@ const ProviderItem = ({
               </div>
               <div className='
                 flex items-center
-                px-3 h-7 rounded-md cursor-pointer bg-primary-700
+                px-3 h-7 rounded-md cursor-pointer bg-primary-600
                 text-xs font-medium text-white
               ' onClick={handleUpdateToken}>
                 {t('common.operation.save')}

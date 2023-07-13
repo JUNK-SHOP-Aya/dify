@@ -1,9 +1,9 @@
 const translation = {
   welcome: {
     firstStepTip: '开始之前,',
-    enterKeyTip: '请先在下方输入你的 OpenAI API Key',
-    getKeyTip: '从 OpenAI 获取你的 API Key',
-    placeholder: '你的 OpenAI API Key（例如 sk-xxxx）',
+    enterKeyTip: '请先在下方输入你的 API Key',
+    getKeyTip: '获取你的 API Key',
+    placeholder: '你的 API Key',
   },
   overview: {
     title: '概览',
@@ -33,7 +33,7 @@ const translation = {
           copyRightPlaceholder: '请输入作者或组织名称',
           privacyPolicy: '隐私政策',
           privacyPolicyPlaceholder: '请输入隐私政策',
-          privacyPolicyTip: '帮助访问者了解该应用收集的数据，可参考 Dify 的<privacyPolicyLink>隐私政策</privacyPolicyLink>。',
+          privacyPolicyTip: '帮助访问者了解该应用收集的数据，可参考<privacyPolicyLink>隐私政策</privacyPolicyLink>。',
         },
       },
       embedded: {
@@ -54,7 +54,7 @@ const translation = {
           name: 'Fork 客户端代码修改后部署到 Vercel（推荐）',
           step1: 'Fork 客户端代码并修改',
           step1Tip: '点击此处 Fork 源码到你的 GitHub 中，然后修改代码',
-          step1Operation: 'Dify-WebClient',
+          step1Operation: 'WebClient',
           step2: '配置 Web APP',
           step2Tip: '复制 Web API 秘钥 和 APP ID 拷贝到客户端代码 config/index.ts 中',
           step3: '部署到 Vercel 中',
@@ -90,9 +90,9 @@ const translation = {
       explanation: '与 AI 有效互动，即有一问一答以上的唯一用户数。提示词编排和调试的会话不计入。',
     },
     tokenUsage: {
-      title: '费用消耗',
-      explanation: '反映每日该应用请求语言模型的 Tokens 花费，用于成本控制。',
-      consumed: '耗费',
+      title: 'Token 消耗',
+      explanation: '反映每日该应用请求语言模型的 Tokens 消耗，用于成本控制。',
+      consumed: '消耗',
     },
     avgSessionInteractions: {
       title: '平均会话互动数',

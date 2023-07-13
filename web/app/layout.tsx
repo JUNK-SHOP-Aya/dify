@@ -6,7 +6,7 @@ import './styles/globals.css'
 import './styles/markdown.scss'
 
 export const metadata = {
-  title: 'Dify',
+  title: 'Ava',
 }
 
 const LocaleLayout = ({
@@ -17,7 +17,7 @@ const LocaleLayout = ({
   const locale = getLocaleOnServer()
 
   return (
-    <html lang={locale ?? 'en'} className="h-full">
+    <html lang={locale ?? 'zh-Hans'} className="h-full">
       <body
         className="h-full"
         data-api-prefix={process.env.NEXT_PUBLIC_API_PREFIX}

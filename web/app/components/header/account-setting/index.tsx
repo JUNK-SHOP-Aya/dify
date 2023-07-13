@@ -45,13 +45,13 @@ export default function AccountSetting({
           icon: <AtSymbolIcon className={iconClassName} />,
           activeIcon: <AtSymbolIcon className={iconClassName} />,
         },
-        {
-          key: 'language',
-          name: t('common.settings.language'),
-          icon: <GlobeAltIcon className={iconClassName} />,
-          activeIcon: <GlobalAltIconSolid className={iconClassName} />,
-        },
-      ],
+        // {
+        //   key: 'language',
+        //   name: t('common.settings.language'),
+        //   icon: <GlobeAltIcon className={iconClassName} />,
+        //   activeIcon: <GlobalAltIconSolid className={iconClassName} />,
+        // },
+      ]
     },
     {
       key: 'workspace-group',
@@ -63,20 +63,14 @@ export default function AccountSetting({
           icon: <UsersIcon className={iconClassName} />,
           activeIcon: <UsersIconSolid className={iconClassName} />,
         },
-        {
-          key: 'provider',
-          name: t('common.settings.provider'),
-          icon: <CubeTransparentIcon className={iconClassName} />,
-          activeIcon: <CubeTransparentIcon className={iconClassName} />,
-        },
-        {
-          key: 'data-source',
-          name: t('common.settings.dataSource'),
-          icon: <Database03 className={iconClassName} />,
-          activeIcon: <Database03Solid className={iconClassName} />,
-        },
-      ],
-    },
+        // {
+        //   key: 'provider',
+        //   name: t('common.settings.provider'),
+        //   icon: <CubeTransparentIcon className={iconClassName} />,
+        //   activeIcon: <CubeTransparentIcon className={iconClassName} />,
+        // },
+      ]
+    }
   ]
 
   return (

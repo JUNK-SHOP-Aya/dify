@@ -19,10 +19,9 @@ else if (
 }
 else {
   if (isDevelopment) {
-    apiPrefix = 'https://cloud.dify.dev/console/api'
-    publicApiPrefix = 'https://dev.udify.app/api'
-  }
-  else {
+    apiPrefix = 'http://127.0.0.1/console/api';
+    publicApiPrefix = 'http://127.0.0.1/api';
+  } else {
     // const domainParts = globalThis.location?.host?.split('.');
     // in production env, the host is dify.app . In other env, the host is [dev].dify.app
     // const env = domainParts.length === 2 ? 'ai' : domainParts?.[0];
@@ -35,7 +34,7 @@ export const API_PREFIX: string = apiPrefix
 export const PUBLIC_API_PREFIX: string = publicApiPrefix
 
 const EDITION = process.env.NEXT_PUBLIC_EDITION || globalThis.document?.body?.getAttribute('data-public-edition')
-export const IS_CE_EDITION = EDITION === 'SELF_HOSTED'
+export const IS_CE_EDITION = true
 
 export const TONE_LIST = [
   {

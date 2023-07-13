@@ -69,7 +69,7 @@ function AppCard({
   const basicName = isApp ? appInfo?.site?.title : t('appOverview.overview.apiInfo.title')
   const runningStatus = isApp ? appInfo.enable_site : appInfo.enable_api
   const { app_base_url, access_token } = appInfo.site ?? {}
-  const appUrl = `${app_base_url}/${appInfo.mode}/${access_token}`
+  const appUrl = `${app_base_url}:8181/${appInfo.mode}/${access_token}`
   const apiUrl = appInfo?.api_base_url
 
   let bgColor = 'bg-primary-50 bg-opacity-40'
@@ -175,23 +175,6 @@ function AppCard({
           })}
         </div>
       </div>
-      {isApp
-        ? (
-          <div
-            className={
-              'flex items-center px-6 py-2 box-border text-xs text-gray-500 bg-opacity-50 bg-white border-t-[0.5px] border-primary-50'
-            }
-          >
-            <div
-              className="flex items-center hover:text-primary-600 hover:cursor-pointer"
-              onClick={onClickCustomize}
-            >
-              <SparklesIcon className="w-4 h-4 mr-1" />
-              {t('appOverview.overview.appInfo.customize.entry')}
-            </div>
-          </div>
-        )
-        : null}
       {isApp
         ? (
           <div>

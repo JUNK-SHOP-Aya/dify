@@ -130,13 +130,13 @@ const InstallForm = () => {
               <Link
                 className='text-primary-600'
                 target={'_blank'}
-                href='https://docs.dify.ai/user-agreement/terms-of-service'
+                href='/termsofservice'
               >{t('login.tos')}</Link>
               &nbsp;&&nbsp;
               <Link
                 className='text-primary-600'
                 target={'_blank'}
-                href='https://langgenius.ai/privacy-policy'
+                href='/privacypolicy'
               >{t('login.pp')}</Link>
             </div>
 

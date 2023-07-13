@@ -1,0 +1,75 @@
+.selmodelPage {
+    /* background-image: linear-gradient(180deg, #EFEAEF, #DBDBF3); */
+    @apply bg-gray-100;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splitline {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    @apply bg-gray-200;
+}
+
+.logo {
+    position: absolute;
+    width: 96px;
+    height: 40px;
+    top: 5px;
+    left: 20px;
+    background: url(~@/app/components/share/chat/welcome/icons/logo.png) center center no-repeat;
+    background-size: contain;
+}
+
+.userinfo {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+}
+
+.selsContainer {
+    width: calc(100% - 40px);
+    height: 160px;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modelContainer {
+    width: calc(50% - 10px);
+    height: 100%;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-top: 30px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.modelContainer:hover {
+    /* @apply bg-primary-50; */
+    transition: all 0.2s;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(0, 0, 0, .1);
+}
+
+.modelTitle {
+    font-size: 16px;
+    display: flex;
+}
+
+.modelDetail {
+    margin-top: 36px;
+    font-size: 12px;
+}
