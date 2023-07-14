@@ -20,7 +20,6 @@ const SelModel = () => {
   return (
     <>
       <div className={style.privacy_policy}>
-        <div className={style.logo}></div>
         <div className={style.acticle_container}>
           <div className={style.container}>
             <h1>隐私协议</h1>

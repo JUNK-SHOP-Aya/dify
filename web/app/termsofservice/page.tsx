@@ -20,7 +20,6 @@ const SelModel = () => {
   return (
     <>
       <div className={style.terms_of_service}>
-        <div className={style.logo}></div>
         <div className={style.acticle_container}>
           <div className={style.container}>
             <h1>服务协议</h1>
