@@ -1,4 +1,4 @@
-FROM langgenius/dify-web:0.3.7
+FROM langgenius/dify-web:0.3.8
 
 LABEL maintainer="takatost@gmail.com"
 
