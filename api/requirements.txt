@@ -35,3 +35,4 @@ docx2txt==0.8
 pypdfium2==4.16.0
 resend~=0.5.1
 pyjwt~=2.6.0
+langflow>==0.0.86
